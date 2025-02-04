@@ -1,7 +1,7 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
+- **Name**: Kevin Hu
+- **Dot Number**:hu.3116
 - **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
 
 ## Assignment Overview
@@ -200,68 +200,84 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1:taskManager
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Could be able to reate, update and delete tasks even tracing a specific mission in order to manage lots of tasks and improve work efficiency. Could be use in Company's employ mission manage system.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - void addTask(String taskname, int priority number)
+    - void removeTask(String taskname)
+    - boolean hasTask(String taskname)
+    - int getTaskpriority(String taskname)
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - void Markascompleted(String taskname)
+    - void sortBypriority()
+    - void clearCompletedtask()
+    -
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, it could be mutable, for example when a mission is completed it should be mark as done, and others priority level should be updated
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, it might need map (pairs) to instore task's content like pair<String taskname, int priorityNumber>
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, probably it will have enums to describe the priority level like low,medium,high and for constants it may have the maximum task's number restriction.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, definately. For example, sortBypriority could be implemented by using getTaskpriority.
+- Component Design #2: HomeController
+  - **Description**:
+    - This component is designed to control smart home facilities, nowadays, smart home equipment has been used more and more widely and it will provide more convenience for the owner. In order to service them better, a controller system is needed.
+  - **Kernel Methods**:
+    - void turnOn(String deviceName)
+    - void turnOff(String deviceName)
+    - boolean isDeviceOn(String deviceName)
+    - int getDeviceStatus(String deviceName)
+  - **Secondary Methods**:
+    - void scheduleDevice(String deviceName, int time)
+    - void setBrightness(String deviceName, int level)
+    - boolean isAnyDeviceOn()
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      -Yes, it's mutable, for example both the time and the condition shpuld be mutable.
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)?Answer and explain:
+      - Probably yes, pair is a good way to instore the device name and it's information.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Definately, there should be enums like TV Light AC and so on...
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, for example use int getDeviceStatus(String deviceName) to implement boolean isAnyDeviceOn(), like 0 is off, 1 is on.
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: inventoryManager
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - This component is used to manage inventory and track the quantity, purchase and shipment of items.
+    Suitable for retail, warehouse management, supply chain system.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - void addItem(String itemName, int quantity)
+    - void removeItem(String itemName, int quantity)
+    - boolean hasItem(String itemName)
+    - int getItemCount(String itemName)
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - void restock(String itemName, int quantity)
+    - boolean isStockLow(String itemName)
+    - void clearInventory()
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, it's definateli mutable for the quantity of products.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, use map to instor the name and the quantity.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      -  Probably yes, for example there may be a constant 5 for the lowest stock warning
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, for example void clearInventory() could be inplemented by void removeItem(String itemName, int quantity)
 
 ## Post-Assignment
 
