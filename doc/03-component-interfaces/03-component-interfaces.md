@@ -1,9 +1,8 @@
 # Portfolio Part 3: Component Interfaces
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
-
+- **Name**: Kevin Hu
+- **Dot Number**: Hu.3116
+- **Due Date**:
 ## Assignment Overview
 
 By now, you have had the opportunity to create three high-level component
@@ -136,6 +135,8 @@ of it in this folder. You may also embed it just below using markdown syntax
 Below is the hierarchy diagram for the InventoryManager component:
 
 ![Inventory Manager Hierarchy](doc/03-component-interfaces/Graph.jpeg)
+If the image is not displayed here, please open the file manually in the repository at:
+`doc/03-component-interfaces/Graph.jpeg`
 
 
 
