@@ -5,7 +5,8 @@ import java.util.TreeMap;
  * This implementation follows the Standard<T> pattern and implements Kernel &
  * Secondary methods.
  */
-public final class InventoryManager implements InventoryManagerKernel {
+public final class InventoryManager implements InventoryManagerInterface {
+
     /**
      * Stores the inventory data with item names as keys and their corresponding
      * quantities as values.
@@ -57,6 +58,7 @@ public final class InventoryManager implements InventoryManagerKernel {
     /**
      * Secondary Methods (Implemented using Kernel Methods).
      */
+    @Override
     public void clearInventory() {
         this.inventory.clear();
     }
@@ -69,6 +71,7 @@ public final class InventoryManager implements InventoryManagerKernel {
      *            the name of the item to check
      * @return true if the stock is low, false otherwise
      */
+    @Override
     public boolean isStockLow(String itemName) {
         return this.getItemCount(itemName) < 5;
     }
@@ -83,6 +86,7 @@ public final class InventoryManager implements InventoryManagerKernel {
      * @throws IllegalArgumentException
      *             if quantity is negative
      */
+    @Override
     public void restock(String itemName, int quantity) {
         this.addItem(itemName, quantity);
     }
@@ -93,6 +97,7 @@ public final class InventoryManager implements InventoryManagerKernel {
      *
      * @return new instance of InventoryManager
      */
+    @Override
     public InventoryManager newInstance() {
         return new InventoryManager();
     }
