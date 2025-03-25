@@ -1,3 +1,5 @@
+import java.util.Set;
+
 import components.standard.Standard;
 
 /**
@@ -52,4 +54,12 @@ public interface InventoryManagerKernel extends Standard<InventoryManager> {
      * @ensures \result = this.inventory[itemName] if itemName exists, else 0
      */
     int getItemCount(String itemName);
+
+    /**
+     * Returns the set of all item names in the inventory.
+     *
+     * @return Set of item names
+     * @ensures \result = all keys in inventory
+     */
+    Set<String> getAllItems();
 }

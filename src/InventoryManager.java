@@ -33,12 +33,4 @@ public interface InventoryManager extends InventoryManagerKernel {
      * @ensures this.inventory[itemName] = #this.inventory[itemName] + quantity
      */
     void restock(String itemName, int quantity);
-
-    /**
-     * Creates a new instance of InventoryManager.
-     *
-     * @return a new instance of InventoryManager
-     */
-    @Override
-    InventoryManager newInstance();
 }
