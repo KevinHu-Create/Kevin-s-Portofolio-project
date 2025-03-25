@@ -1,4 +1,6 @@
+import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 /**
  * InventoryManager component following OSU CSE component design discipline.
@@ -100,6 +102,28 @@ public final class InventoryManagerImpl implements InventoryManager {
     @Override
     public InventoryManager newInstance() {
         return new InventoryManagerImpl();
+    }
+
+    @Override
+    public void clear() {
+        this.clearInventory();
+    }
+
+    @Override
+    public void transferFrom(InventoryManager source) {
+        assert source != null : "Violation of: source is not null";
+
+        this.clearInventory();
+
+        for (String item : source.getAllItems()) {
+            int quantity = source.getItemCount(item);
+            this.restock(item, quantity);
+        }
+    }
+
+    @Override
+    public Set<String> getAllItems() {
+        return new TreeSet<>(this.inventory.keySet());
     }
 
     /**
