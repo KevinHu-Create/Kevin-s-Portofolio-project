@@ -34,3 +34,18 @@ the following form: YYYY.0M.0D.
 
 ### Fixed
 - Resolved potential naming conflict between `InventoryManager` class and `InventoryManagerInterface`.
+
+## 2025.03.25
+
+### Added
+
+- Created abstract class `InventoryManagerSecondary` to implement all secondary methods using only kernel methods.
+- Implemented `clearInventory()`, `isStockLow(String)`, and `restock(String, int)` in the abstract class.
+- Implemented `toString()` for formatted inventory display.
+- Added OSU CSE Components.jar to lib in order to avoid add all standard method to components by hand
+### Updated
+
+- Added `getAllItems()` to `InventoryManagerKernel` interface.
+- Implemented `getAllItems()` in `InventoryManagerImpl` to support iteration from secondary methods.
+- Implemented `clear()` and `transferFrom()` in `InventoryManagerImpl` to satisfy `Standard<InventoryManager>` contract from inherited interface.
+- Removed redundant `newInstance()` declaration from `InventoryManager` interface since it is inherited from `Standard<T>`.
