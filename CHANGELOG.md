@@ -49,3 +49,19 @@ the following form: YYYY.0M.0D.
 - Implemented `getAllItems()` in `InventoryManagerImpl` to support iteration from secondary methods.
 - Implemented `clear()` and `transferFrom()` in `InventoryManagerImpl` to satisfy `Standard<InventoryManager>` contract from inherited interface.
 - Removed redundant `newInstance()` declaration from `InventoryManager` interface since it is inherited from `Standard<T>`.
+
+## 2025.04.08
+
+### Added
+
+- Implemented kernel component `InventoryManager1L` extending `InventoryManagerSecondary`
+- Chose `Map<String, Integer>` as internal representation to model inventory state
+- Provided `Convention` and `Correspondence` in file header to define valid states and abstraction
+
+### Implemented
+
+- All kernel methods: `addItem`, `removeItem`, `hasItem`, `getItemCount`, and `getAllItems`
+- All `Standard` methods: `newInstance`, `clear`, and `transferFrom`
+- Included full Javadoc for all methods, following design-by-contract style
+
+
