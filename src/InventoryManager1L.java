@@ -17,13 +17,22 @@ import java.util.TreeSet;
  */
 public class InventoryManager1L extends InventoryManagerSecondary {
 
-    private final Map<String, Integer> inventory;
+    private  Map<String, Integer> inventory;
+
+    /**
+     * Creates and returns a new empty representation for the inventory.
+     *
+     * @return a new empty map
+     */
+    private Map<String, Integer> createNewRep() {
+        return new HashMap<>();
+    }
 
     /**
      * No-argument constructor. Initializes the inventory as an empty map.
      */
     public InventoryManager1L() {
-        this.inventory = new HashMap<>();
+        this.inventory = this.createNewRep();
     }
 
     /**
@@ -45,7 +54,29 @@ public class InventoryManager1L extends InventoryManagerSecondary {
      */
     @Override
     public void clear() {
-        this.clearInventory(); // calls the secondary method from superclass
+        this.inventory = this.createNewRep();
+    }
+
+    @Override
+    public String toString() {
+    return this.inventory.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+    if (this == o) {
+        return true;
+    }
+    if (o == null || this.getClass() != o.getClass()) {
+        return false;
+    }
+    InventoryManager1L other = (InventoryManager1L) o;
+    return this.inventory.equals(other.inventory);
+    }
+
+    @Override
+    public int hashCode() {
+    return this.inventory.hashCode();
     }
 
     /**
