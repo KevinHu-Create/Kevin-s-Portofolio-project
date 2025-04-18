@@ -11,6 +11,21 @@ import java.util.TreeSet;
  */
 public abstract class InventoryManagerSecondary implements InventoryManager {
 
+    @Override
+    public InventoryManager newInstance() {
+        try {
+            return this.getClass().getConstructor().newInstance();
+        } catch (Exception e) {
+            throw new AssertionError("Cannot instantiate class.");
+        }
+    }
+
+
+    @Override
+    public void clear() {
+        this.clearInventory();
+    }
+
     /**
      * {@inheritDoc}
      *

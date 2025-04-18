@@ -16,92 +16,65 @@ import java.util.TreeSet;
  * number of units of item 'k' in the inventory.
  */
 public class InventoryManager1L extends InventoryManagerSecondary {
-
-    private  Map<String, Integer> inventory;
+    /**
+     * Map that stores inventory items and their quantities. The keys are item
+     * names (non-null, non-empty strings), and the values are positive integers
+     * representing item counts.
+     *
+     * This representation follows the class-level Convention and
+     * Correspondence.
+     */
+    private Map<String, Integer> inventory;
 
     /**
      * Creates and returns a new empty representation for the inventory.
      *
      * @return a new empty map
      */
-    private Map<String, Integer> createNewRep() {
-        return new HashMap<>();
+    private void createNewRep() {
+        this.inventory = new HashMap<>();
     }
 
     /**
      * No-argument constructor. Initializes the inventory as an empty map.
      */
     public InventoryManager1L() {
-        this.inventory = this.createNewRep();
+        this.createNewRep();
     }
 
-    /**
-     * {@inheritDoc}
-     *
-     * Creates and returns a new, empty instance of InventoryManager.
-     *
-     * @return new instance of InventoryManager
-     */
     @Override
-    public InventoryManager newInstance() {
-        return new InventoryManager1L();
-    }
+    public void transferFrom(InventoryManager source) {
+    assert source != null : "Violation of: source is not null";
+    assert source != this : "Violation of: source is not this";
 
-    /**
-     * {@inheritDoc}
-     *
-     * Clears all items from the inventory.
-     */
-    @Override
-    public void clear() {
-        this.inventory = this.createNewRep();
-    }
+    InventoryManager1L localSource = (InventoryManager1L) source;
+
+    Map<String, Integer> temp = this.inventory;
+    this.inventory = localSource.inventory;
+    localSource.inventory = temp;
+}
+
 
     @Override
     public String toString() {
-    return this.inventory.toString();
+        return this.inventory.toString();
     }
 
     @Override
     public boolean equals(Object o) {
-    if (this == o) {
-        return true;
-    }
-    if (o == null || this.getClass() != o.getClass()) {
-        return false;
-    }
-    InventoryManager1L other = (InventoryManager1L) o;
-    return this.inventory.equals(other.inventory);
+        if (this == o) {
+            return true;
+        }
+        if (o == null || this.getClass() != o.getClass()) {
+            return false;
+        }
+        InventoryManager1L other = (InventoryManager1L) o;
+        return this.inventory.equals(other.inventory);
     }
 
     @Override
     public int hashCode() {
-    return this.inventory.hashCode();
-    }
-
-    /**
-     * {@inheritDoc}
-     *
-     * Transfers the contents of the source inventory into this inventory. The
-     * source inventory will be empty after the operation.
-     *
-     * @param source
-     *            the inventory to transfer from
-     * @requires source != null
-     * @ensures this = #source and source = empty
-     */
-    @Override
-    public void transferFrom(InventoryManager source) {
-        assert source != null : "source must not be null";
-
-        this.clearInventory();
-
-        for (String item : source.getAllItems()) {
-            int quantity = source.getItemCount(item);
-            this.restock(item, quantity);
-        }
-
-        source.clearInventory();
+        return this.inventory.hashCode();
     }
 
     /**
