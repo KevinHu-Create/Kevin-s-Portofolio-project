@@ -114,8 +114,7 @@ Below is further rationale/explanation for the rubric items above:
 > to create a new design. In you do end up picking one at random, you should
 > disclose that here as well.
 
-<!-- TODO: briefly argue your choice of design or design something
-new; then delete this comment -->
+> I choose my Component Design #3: InventoryManager, because I consider the relationship between my kernel method and my secondary method are quite clear, so it will be more easier to implement. Second, I think the data structure will be easier cause it will not include many complicate internal structures.
 
 > Once you've argued your choice of design, make a branch in your new repo called
 > something like `proof-of-concept`. There are many ways to do this, but my
