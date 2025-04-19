@@ -1,7 +1,7 @@
 # Portfolio Part 6: Finishing Touches
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
+- **Name**: Kevin Hu
+- **Dot Number**: hu.3116
 - **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
 
 ## Assignment Overview
@@ -307,18 +307,18 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I think this portofolio project help me to get a better understand the software development, first because it help me to get a better understanding of module design which let me know how a project should be stuctured and also help me to get familiar with design by contract, which I think will also be helpful in future's work.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+Of course! To be honest, I have to say this process illustrate much of my mistakes, first is the implementation of methods, at first I thought some standard methods I will not be used in my InventoryManager component for example, the transferFrom method because I think in the situation of real inventorymanagement there will be no place to use it, As I thought it will bot be used so I didn't prepare to implement in the class but finally I get understand all methods that are ingerited from interfaces should be implemented, what's more, before this project, I don't know that equals and hashcode should be both modified when you try to override them but now I understood. Additionally, when I try to run the demo I first try to click the running button but it couldn't work , but now I understand it is because of the management of classpath that it is also my knowledge gap.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+Well, that's a complex question for me. Because after this project I found that there are a lot of details during development, for example get clear of the structure is not quite an easy job and I believe in the future, the structure will be much more complex than this one, it needs patience to write a modular, maintainable and testable code. But on the other hand, everytime when I finally found the problem, the sense of achivement will replace the bad feeling, that's what I like.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -326,29 +326,53 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+Well, after this project I have acquired:
+In part 1:
+Learned how to identify real-world problems that can be modeled as software components
+
+In part 2&3:
+ Through Designed InventoryManager, InventoryManagerKernel I understand the idea of component layering
+Learned how to write kernel interface and enhanced interface, and undaerstand the difference between primary/secondary operations
+Get a deeper understand of precondition/postcondition 's function and it's restriction
+
+In part 4: I learned how to use kernel methods to construct secondary methods  in InventoryManagerSecondary
+Know how to implement toSting equals and hashcode
+
+In part 5: Use proper data stucture to implement InventoryManager1L (for my project it's Map)
+Understand the implementation of createNewRep and how to implement transfer from without loop which will decrease the time complexity
+
+In part 6: Know how to use JUnit test to test kernel methods and Secondary methods.
+Create two application example InventoryAppDemo1 and InventoryRestocker
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+In cv I think it could be expressed in following way:
+ "Designed and implemented a reusable Java component (InventoryManager) following multi-layered software architecture"
+ "Have the ability to write comprehensive unit tests with JUnit to ensure full method coverage"
+ "Applied abstraction functions and representation invariants to model real-world inventory logic"
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+This project give me a chanve to get a closer look of what is "back-end development" especially the API and component design job and know what is it. At the same time, I also leared how to use latex to edit documents and find a template of personal page and complete it(which might be a little bit similar to the front-end development), combined these two sides it will help me to decide which specialization area I would like to choose and what job I will gonna to applt in the future.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+For the first question I think in the future I could develop more individual component like what we have done in this semester so I can can more and more familiar with component structures and try to developed more complex one. What's more try to join some open source project on Github. For understanding more about data structure, finish some questions on Leetcode is also a good choice.
+
+The mentors I can contact with are:
+1.Our university's professors and TAs
+2.Some developer on github
+3.some expericed developers in some forum like CSDN
 
 ### Changelog
 
-<!-- TODO: update CHANGELOG then delete this comment -->
+
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -384,7 +408,7 @@ request merge (or at least tag your commits). This is not required.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
+
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
