@@ -1,3 +1,5 @@
+package components.inventorymanager;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -27,9 +29,9 @@ public class InventoryManager1L extends InventoryManagerSecondary {
     private Map<String, Integer> inventory;
 
     /**
-     * Creates and returns a new empty representation for the inventory.
+     * Creates a new empty representation for the inventory.
      *
-     * @return a new empty map
+     *
      */
     private void createNewRep() {
         this.inventory = new HashMap<>();
@@ -44,16 +46,15 @@ public class InventoryManager1L extends InventoryManagerSecondary {
 
     @Override
     public void transferFrom(InventoryManager source) {
-    assert source != null : "Violation of: source is not null";
-    assert source != this : "Violation of: source is not this";
+        assert source != null : "Violation of: source is not null";
+        assert source != this : "Violation of: source is not this";
 
-    InventoryManager1L localSource = (InventoryManager1L) source;
+        InventoryManager1L localSource = (InventoryManager1L) source;
 
-    Map<String, Integer> temp = this.inventory;
-    this.inventory = localSource.inventory;
-    localSource.inventory = temp;
-}
-
+        Map<String, Integer> temp = this.inventory;
+        this.inventory = localSource.inventory;
+        localSource.inventory = temp;
+    }
 
     @Override
     public String toString() {

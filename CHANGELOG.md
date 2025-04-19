@@ -64,4 +64,25 @@ the following form: YYYY.0M.0D.
 - All `Standard` methods: `newInstance`, `clear`, and `transferFrom`
 - Included full Javadoc for all methods, following design-by-contract style
 
+## 2025.04.18
 
+### Added
+- Completed full JUnit test suite for `InventoryManager` component (kernel and secondary methods)
+- Created two usage demos: `InventoryAppDemo1.java` (basic operations) and `InventoryRestocker.java` (auto-restocking)
+
+### Updated
+- Finalized kernel implementation in `InventoryManager1L`
+- Updated class-level Javadoc for representation, convention, and correspondence
+- Polished code for consistency with OSU CSE component discipline
+
+### Notes
+- Because I noticed that we haven't set the launch.jason so from what I learned it will not add components.jar to the defualt classpath, therefore I'm afraid the the running button could not be used. To run the demo applications, please compile and run using the following:
+
+```bash
+# Compile and run InventoryAppDemo1
+javac -cp "lib/components.jar:src" -d bin src/InventoryAppDemo1.java
+java -cp "lib/components.jar:bin" InventoryAppDemo1
+
+# Compile and run InventoryRestocker
+javac -cp "lib/components.jar:src" -d bin src/InventoryRestocker.java
+java -cp "lib/components.jar:bin" InventoryRestocker

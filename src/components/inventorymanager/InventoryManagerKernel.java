@@ -1,3 +1,4 @@
+package components.inventorymanager;
 import java.util.Set;
 
 import components.standard.Standard;

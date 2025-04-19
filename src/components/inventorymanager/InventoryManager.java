@@ -1,3 +1,4 @@
+package components.inventorymanager;
 /**
  * The InventoryManager interface provides enhanced inventory management
  * functionalities. It extends InventoryManagerKernel and adds additional
